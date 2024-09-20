@@ -1,0 +1,64 @@
+
+
+JAVA 17 major features:
+1)LANGUAGE FEATURES:First category: Nice developer-related features
+################################################################
+1.Switch Pattern Matching (Preview)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+2.Generate sealed Classes
+^^^^^^^^^^^^^^^^^^^^^^^^^
+before knowing about sealed class we know that abstract class is maeant to be innherited and final class is not meant to be inherited
+what if we need something between this concept?
+you want to some class to be inherited  but not all the class here come sealed class
+here you are restrcting the inheritance
+
+How to achieve:
+->make the class which you want to inherit(as sealed) and give permit for  the child classes
+Ex:sealed class A permits B,C,D{
+}
+
+->the child class which inherited it should be either sealed,non-sealed,or final
+
+
+sealed class B extends A{//
+	
+}
+non-sealed class C extends A{////which can be extented by any class
+	
+}
+final class D extends A{//no class can be extend this class
+	
+}
+->we can sachiev in abstract class level also but child cant be final when you have child abstract class
+
+//specificall for designing the appliatiom 
+ex:playment gateways;'if you ant to accept only particular payment gateways or some thing like that scenario
+
+-?we can achive interface level also but child cant be final when  you have child Interface (interface cant be final)
+
+
+3.RECORD CLASS
+^^^^^^^^^^^^^^^^^^^
+we will be having some class which will hold data (data carrying purpose)and  (not processing ,not buiness logic)
+ex:
+
+client asks for data-. to server- so server replies as objects and it conversted in jsonand come and same way if database it there server asks
+database and give to client
+
+
+
+4.TEXT_BLOCKS
+^^^^^^^^^^^^^^^^^^
+new update for string
+we have string in java 
+string is a class
+ 
+ 
+ generally string s1="jamal";//we easly create string
+ 
+ with java 17 it came but
+ in njava 15 standarb version came
+ in java 21 string template enchnacement came
+ 
